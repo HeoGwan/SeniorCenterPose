@@ -95,7 +95,7 @@ const DualPoseViewer = () => {
             <div style={{ position: "relative", width: "50vw", height: "100vh" }}>
                 <video
                     ref={videoRef}
-                    src="/Test.mp4"
+                    src="/Lunge.mp4"
                     autoPlay
                     muted
                     loop
@@ -126,6 +126,25 @@ const DualPoseViewer = () => {
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
+                    }}
+                />
+                {/* 오버레이 */}
+                <video
+                    ref={videoRef}
+                    src="/Lunge.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        objectFit: 'cover',
+                        opacity: 0.25,
+                        zIndex: 10,
                     }}
                 />
                 <canvas
